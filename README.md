@@ -10,7 +10,7 @@
 
 - **pandas:** exploracion de estructuras, nulos, tipos, estadistica.
 - **numpy:** analizar los valores y operaciones numericas.
-- **matplotlib:** para una visualizacion exploratoria como distribuciones y relaciones.
+- **matplotlib, seaborn :** para una visualizacion exploratoria como distribuciones y relaciones.
 - De las cuales se utilizaron `shape`, `describe`, `info`, `unique`, etc.
 
 > Primera fase se analiza de la siguiente manera:
