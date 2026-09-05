@@ -1,30 +1,36 @@
 # Sign-Language-MNIST
 
-## Analisis Exploratorio EDA
+## Análisis Exploratorio EDA
 
-> En primera instancia se procede a aplicar una metodologia para analisis exploratio de datos aplicando **EDA**.
+> En primera instancia se procede a aplicar una metodologia para analisis exploratorio de datos aplicando **EDA**.
 
-    - se utilizaron las siguientes librerias como refuerzo para este analisis;
-        - pandas, exploracion de estructuras, nulos, tipos, estadistica.
-        - numpy , analizar los valores y operaciones numericas.
-        - matplotli, para una visualizacion exploratoria como distribuciones y relaciones.
-        - de las cuales se utilizaron shape, describe , info , unique ,etc.
+### Librerías utilizadas
 
-> > primera fase se analiza de la siguiente manera
+> Se utilizaron las siguientes librerias como refuerzo para este analisis:
 
-- conocimiento del dataset
-- conocer las dimensiones de ambos archivos train y test
-- conocer las clases y su cantidad.
-- revisar valores.
-- entender features y label.
+- **pandas:** exploracion de estructuras, nulos, tipos, estadistica.
+- **numpy:** analizar los valores y operaciones numericas.
+- **matplotlib:** para una visualizacion exploratoria como distribuciones y relaciones.
+- De las cuales se utilizaron `shape`, `describe`, `info`, `unique`, etc.
 
-> > procesamiento
+> Primera fase se analiza de la siguiente manera:
 
-- separacion de datos, features y label.
-- normalizacion de pixeles.
+- Conocimiento del dataset.
+- Conocer las dimensiones de ambos archivos `train` y `test`.
+- Conocer las clases y su cantidad.
+- Revisar valores.
+- Entender `features` y `label`.
 
-> > preparacion de 1 pipeline tensores a dataset
+### Procesamiento
 
-- tf.data.Dataset
+- Separacion de datos, `features` y `label`.
+- Normalizacion de pixeles.
+-
 
-> > entrenamiento
+### Preparación de 1 pipeline: tensores a Dataset
+
+- En la etapa de normalización se utiliza la función normalizar. En esta fase ocurren dos procesos: primero se realiza el casteo de los valores numéricos, convirtiendo los datos a float32, lo que permite trabajar con ellos como tensores de TensorFlow. Posteriormente, cada valor de intensidad de los píxeles se divide por 255, que corresponde al valor máximo de intensidad, obteniendo valores dentro del rango de 0 a 1.
+
+- Posteriormente, los tensores de características y sus etiquetas se utilizan para construir un tf.data.Dataset, manteniendo la correspondencia entre cada imagen y su etiqueta.
+
+### Entrenamiento
