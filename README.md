@@ -1,6 +1,19 @@
 # Sign-Language-MNIST
 
-## Análisis Exploratorio EDA
+**Asignatura:** TLY1102 – Técnicas Avanzadas de Machine Learning I\
+**Equipo de Trabajo:** Rodrigo Aedo - Benjamín Figueroa - Martina López\
+**Repositorio:** https://github.com/rodrigo0187/Sign-Language-MNIST.git
+
+---
+## 1. Descripción del Problema de Negocio
+Las personas sordas o con dificultades auditivas se comunican en muchos casos mediante lenguaje de señas. Contar con sistemas automáticos capaces de reconocer señas a partir de imágenes es un primer paso hacia herramientas de traducción en tiempo real que faciliten la comunicación entre personas sordas y oyentes que no conocen la lengua de señas.
+## 2. Objetivos del Proyecto
+- Implementar un modelo de **Perceptrón Multicapa (MLP)** capaz de clasificar imágenes.
+- Aplicar un flujo completo de trabajo en aprendizaje supervisado: carga de datos, preprocesamiento, definición de arquitectura, entrenamiento, validación y evaluación.
+- Evaluar el desempeño del modelo con métricas estándar de clasificación e interpretar los resultados de forma crítica.
+- Identificar las limitaciones del uso de un MLP para tareas de clasificación de imágenes.
+
+## 3. Análisis Exploratorio EDA
 
 > En primera instancia se procede a aplicar una metodologia para analisis exploratorio de datos aplicando **EDA**.
 
