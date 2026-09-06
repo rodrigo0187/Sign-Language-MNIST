@@ -1,0 +1,12 @@
+# Entornos virtuales
+.venv/
+.venv-tf/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Datasets
+data/*
