@@ -47,7 +47,7 @@ Identificación del problema de entendimiento de lengua de señas. Definición d
 * **Comprensión de los datos:**
 	Exploración inicial del dataset, verificación del tamaño de muestra ($34.627$), revisión de equilibrio de clases y formato de pixeles.
 * **Preparación de los datos:**
-	Normalización de intensidad $[0,1]$, conversión a ‘tf.float32’ y división del conjunto en **Entrenamiento**, * **Validación** y **Prueba**.
+	Normalización de intensidad $[0,1]$, conversión a ‘tf.float32’ y división del conjunto en **Entrenamiento**, **Validación** y **Prueba**.
 * **Modelado:**
 	Construcción de la red neuronal multicapa (MLP) en Tensor Flow, definiendo capas densas, funciones de activación, regularización y el optimizador.
 * **Evaluación:**
@@ -78,15 +78,17 @@ Documentación técnica “**README.md**”, versionamiento de código y entrega
 - Entender `features` y `label`.
 
 ### Procesamiento
-
 - Separación de datos en características `features` y variable objetivo `label`.
 - Normalización de pixeles mediante escalamiento al rango $[0,1]$.
 - Conversión de tipos de datos a tensores ('tf.float32') para optimizar.
+
+### Diagnóstico
+- La intensidad de pixeles varia en el rango de $[0, 255]}$. Para evitar una saturación de las funciones de activación, se define la normalización al intervalo $[0,1]$.
+- Letras como la **M**, **N** presentan formas casi idénticas al reducirse a $28 \times 28$ píxeles, que solo se diferencian por pequeños cambios de posición del pulgar.
+- Existen variaciones de brillo en los datos, lo que obliga al MLP a aprender bordes.
 
 ### Preparación de 1 pipeline: tensores a Dataset
 
 - En la etapa de normalización se utiliza la función normalizar. En esta fase ocurren dos procesos: primero se realiza el casteo de los valores numéricos, convirtiendo los datos a float32, lo que permite trabajar con ellos como tensores de TensorFlow. Posteriormente, cada valor de intensidad de los píxeles se divide por 255, que corresponde al valor máximo de intensidad, obteniendo valores dentro del rango de 0 a 1.
 
 - Posteriormente, los tensores de características y sus etiquetas se utilizan para construir un tf.data.Dataset, manteniendo la correspondencia entre cada imagen y su etiqueta.
-
-### Entrenamiento
