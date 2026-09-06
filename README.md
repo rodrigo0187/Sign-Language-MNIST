@@ -4,6 +4,8 @@
 **Equipo de Trabajo:** Rodrigo Aedo - Benjamín Figueroa - Martina López\
 **Repositorio:** https://github.com/rodrigo0187/Sign-Language-MNIST.git
 
+**site:** https://rodrigo0187.github.io/Sign-Language-MNIST/
+
 ---
 ## 1. Descripción del Problema de Negocio
 Las personas sordas o con dificultades auditivas se comunican en muchos casos mediante lenguaje de señas. Contar con sistemas automáticos capaces de reconocer señas a partir de imágenes es un primer paso hacia herramientas de traducción en tiempo real que faciliten la comunicación entre personas sordas y oyentes que no conocen la lengua de señas.
