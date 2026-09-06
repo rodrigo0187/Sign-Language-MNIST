@@ -83,7 +83,7 @@ Documentación técnica “**README.md**”, versionamiento de código y entrega
 - Conversión de tipos de datos a tensores ('tf.float32') para optimizar.
 
 ### Diagnóstico
-- La intensidad de pixeles varia en el rango de $[0, 255]}$. Para evitar una saturación de las funciones de activación, se define la normalización al intervalo $[0,1]$.
+- La intensidad de pixeles varia en el rango de $[0, 255]$. Para evitar una saturación de las funciones de activación, se define la normalización al intervalo $[0,1]$.
 - Letras como la **M**, **N** presentan formas casi idénticas al reducirse a $28 \times 28$ píxeles, que solo se diferencian por pequeños cambios de posición del pulgar.
 - Existen variaciones de brillo en los datos, lo que obliga al MLP a aprender bordes.
 
