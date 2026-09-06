@@ -12,8 +12,27 @@ Las personas sordas o con dificultades auditivas se comunican en muchos casos me
 - Aplicar un flujo completo de trabajo en aprendizaje supervisado: carga de datos, preprocesamiento, definición de arquitectura, entrenamiento, validación y evaluación.
 - Evaluar el desempeño del modelo con métricas estándar de clasificación e interpretar los resultados de forma crítica.
 - Identificar las limitaciones del uso de un MLP para tareas de clasificación de imágenes.
+## 3. Definición de KPIs que resolverán el problema de negocio.
+| KPI | Descripción | Umbral Aceptable | Justificación en el negocio |
+| :--- | :---- | :--- | :--- | 
+| **Accuracy** | Porcentaje total de imágenes correctamente clasificadas | **$\ge 85\$** | Con este porcentaje se asegura que la mayoría de caracteres traducidos sean correctos. |
+| **Precision** | Porcentaje de predicciones correctas de una letra que realmente corresponden a esa letra | **$\ge 80\$** | Con esto se minimiza los falsos positivos al interpretar un gesto. |
+| **Recall** | Capacidad del modelo para identificar instancias reales de una seña |
+| **F1-Score** |
+| **Matriz de confusión** | Porcentaje de confusion entre letras similares |
+## 4. Descripción de las fuentes de datos utilizadas
+El proyecto utiliza el conjunto de datos de **Sign Language MNIST**, una adaptacion del abcedario de señas americano en formato de imagenes en escala de grises.
+* **Origen y formato:**
+    * Archivos csv: De entrenamiento 'sign_mnist_train.csv' y de prueba 'sign_mnist_test.csv'.
+    * Estructura: Cada fila es una imagen aplanada de $28 \times 28$ pixeles, que equivale a $784$ pixeles ('pixel1' a 'pixel784'), mas la columna objetivo **label**.
+* **Volumen de datos:**
+    * Entrenamiento: $27.455$ muestras.
+    * Prueba: $7.172$ muestras.
+    * Total: $34.627$ muestras.
+* **Distribución de clases:**
+    * Contiene 25 clases numéricas (valores de $0$ a $24$).
 
-## 3. Análisis Exploratorio EDA
+## 5. Análisis Exploratorio EDA
 
 > En primera instancia se procede a aplicar una metodologia para analisis exploratorio de datos aplicando **EDA**.
 
